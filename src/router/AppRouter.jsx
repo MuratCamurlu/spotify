@@ -12,7 +12,7 @@ const AppRouter = () => {
           <Sidebar />
           <Content />
         </div>
-        <div className="footer text-center position-absolute bottom-0 start-0 border border-top-grey opacity-50 vw-100 p-5">
+        <div className="footer text-center position-absolute bottom-0 start-0 border border-top-grey  vw-100 p-5">
           <Footer />
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Menu from "./sidebar/Menu";
+import PlayList from "./sidebar/PlayList";
 
 const Sidebar = () => {
   return (
@@ -21,6 +22,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </nav>
+      <PlayList />
     </aside>
   );
 };

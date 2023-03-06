@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 
 const Content = () => {
   return (
-    <main className="w-75  border border-danger">
+    <main className="w-100  ms-4 overflow-auto">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

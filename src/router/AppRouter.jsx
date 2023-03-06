@@ -7,12 +7,12 @@ import Sidebar from "../component/Sidebar";
 const AppRouter = () => {
   return (
     <BrowserRouter>
-      <div className=" vw-100 vh-100 position-relative ">
+      <div className=" vw-100 vh-100  ">
         <div className="d-flex vh-100">
           <Sidebar />
           <Content />
         </div>
-        <div className="footer text-center position-absolute bottom-0 start-0 border border-top-grey  vw-100 p-5">
+        <div className="footer text-center p-4 w-100  ">
           <Footer />
         </div>
       </div>

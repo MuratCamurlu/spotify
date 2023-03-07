@@ -33,3 +33,16 @@ aside {
 .playButton:hover {
   transform: scale(1.2);
 }
+.buttonDiv button {
+  background-color: rgb(63, 62, 62);
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+.playButton:hover {
+  transform: scale(1.1);
+}
+.orta {
+  width: 25rem;
+}

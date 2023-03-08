@@ -1,12 +1,23 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { useAudio } from "react-use";
+import { setControls } from "../../features/Player";
 import utils from "../../utils";
 import CustomRange from "../CustomRange";
 const Player = () => {
+  const dispatch = useDispatch();
+  const { current } = useSelector((state) => state.player);
   const [audio, state, controls, ref] = useAudio({
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    src: current?.src,
   });
+  useEffect(() => {
+    dispatch(setControls(controls));
+  }, []);
+  useEffect(() => {
+    controls.play();
+  }, [current]);
+
   const level = useMemo(() => {
     if (state.volume === 0 || state.muted) {
       return "fa-solid fa-volume-xmark";

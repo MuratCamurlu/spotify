@@ -9,6 +9,7 @@ const Home = () => {
       description: "Denemefeefefef",
       image:
         "https://www.acibadem.com.tr/hayat/Images/YayinMakaleler/muzik-kalbin-de-gidasi_3238_1.jpg",
+      src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
     },
     {
       id: 2,
@@ -16,6 +17,7 @@ const Home = () => {
       description: "Denemefeefefefef",
       image:
         "https://www.acibadem.com.tr/hayat/Images/YayinMakaleler/muzik-kalbin-de-gidasi_3238_1.jpg",
+      src: "https://freesound.org/data/previews/612/612092_7037-lq.mp3",
     },
     {
       id: 3,
@@ -23,6 +25,7 @@ const Home = () => {
       description: "Denemeefefefef",
       image:
         "https://www.acibadem.com.tr/hayat/Images/YayinMakaleler/muzik-kalbin-de-gidasi_3238_1.jpg",
+      src: "https://freesound.org/data/previews/612/612092_7037-lq.mp3",
     },
     {
       id: 4,
@@ -30,6 +33,7 @@ const Home = () => {
       description: "Denemeefefefef",
       image:
         "https://www.acibadem.com.tr/hayat/Images/YayinMakaleler/muzik-kalbin-de-gidasi_3238_1.jpg",
+      src: "https://freesound.org/data/previews/612/612092_7037-lq.mp3",
     },
     {
       id: 5,
@@ -37,6 +41,7 @@ const Home = () => {
       description: "Denemeefefefef",
       image:
         "https://www.acibadem.com.tr/hayat/Images/YayinMakaleler/muzik-kalbin-de-gidasi_3238_1.jpg",
+      src: "https://freesound.org/data/previews/612/612092_7037-lq.mp3",
     },
   ];
   return (

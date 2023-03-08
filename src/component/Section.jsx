@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import SongItem from "./SongItem";
 
 const Section = ({ items, title, more = false }) => {
   return (
@@ -13,27 +14,7 @@ const Section = ({ items, title, more = false }) => {
       </header>
       <div className="row">
         {items.map((item) => {
-          const { id, title, description, image } = item;
-          return (
-            <div
-              key={id}
-              className="col-sm-4 col-md-3 col-lg-2 bg-danger p-1 m-3 rounded-1"
-            >
-              <NavLink to="/">
-                <div className="position-relative ">
-                  <img src={image} className="w-100" />
-                  <button className="playButton position-absolute top-50 end-0 ">
-                    <i class="fa-solid fa-play"></i>
-                  </button>
-                  <div className="d-flex flex-column align-items-center">
-                    <h5>
-                      {title}- <span>{description}</span>
-                    </h5>
-                  </div>
-                </div>
-              </NavLink>
-            </div>
-          );
+          return <SongItem item={item} key={item.id} />;
         })}
       </div>
     </section>

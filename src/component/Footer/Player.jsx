@@ -2,7 +2,7 @@ import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { useAudio } from "react-use";
-import { setControls } from "../../features/Player";
+import { setControls, setPlaying } from "../../features/Player";
 import utils from "../../utils";
 import CustomRange from "../CustomRange";
 const Player = () => {
@@ -17,6 +17,9 @@ const Player = () => {
   useEffect(() => {
     controls.play();
   }, [current]);
+  useEffect(() => {
+    dispatch(setPlaying(state.playing));
+  }, [state.playing]);
 
   const level = useMemo(() => {
     if (state.volume === 0 || state.muted) {
@@ -31,7 +34,19 @@ const Player = () => {
   }, [state.volume, state.muted]);
   return (
     <div className="d-flex justify-content-between align-items-center">
-      <div>SOL</div>
+      <div className="d-flex align-items-center">
+        {current && (
+          <div className="d-flex align-items-center">
+            <div className="solImage me-2">
+              <img src={current.image} alt="image" />
+            </div>
+            <div className="d-flex flex-column justify-content-center">
+              <h6>{current.title}</h6>
+              <p>{current.artist}</p>
+            </div>
+          </div>
+        )}
+      </div>
       <div className="orta d-flex flex-column align-items-center">
         <div className="buttonDiv d-flex justify-content-center align-items-center gap-1">
           <button>

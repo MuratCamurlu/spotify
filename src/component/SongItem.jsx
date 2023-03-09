@@ -5,9 +5,17 @@ import { setCurrent } from "../features/Player";
 
 const SongItem = ({ item }) => {
   const dispatch = useDispatch();
-  const { current } = useSelector((state) => state.player);
+  const { current, playing, controls } = useSelector((state) => state.player);
   const updateCurrent = () => {
-    dispatch(setCurrent(item));
+    if (current.id == item.id) {
+      if (playing) {
+        controls.pause();
+      } else {
+        controls.play();
+      }
+    } else {
+      dispatch(setCurrent(item));
+    }
   };
   console.log(current);
   return (
@@ -22,8 +30,10 @@ const SongItem = ({ item }) => {
             onClick={updateCurrent}
             className="playButton position-absolute top-50 end-0 "
           >
-            {current?.id == item?.id && <i class="fa-solid fa-pause"></i>}
-            {!current?.id == item?.id && <i class="fa-solid fa-play"></i>}
+            {current?.id == item?.id && playing && (
+              <i class="fa-solid fa-pause"></i>
+            )}
+            {current?.id != item?.id && <i class="fa-solid fa-play"></i>}
           </button>
           <div className="d-flex flex-column align-items-center">
             <h5>

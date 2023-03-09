@@ -50,3 +50,7 @@ aside {
 .hoverButton:hover button {
   display: block;
 }
+.solImage img {
+  width: 60px;
+  height: 60px;
+}
